@@ -31,7 +31,25 @@ int SummDigits(int n)
     return sum;
 }
 // 4. Функцию, которая проверяет является ли заданное число n полиндромом
+//void Palindrome(int n)
+//{
+int n = 12321;
+string a = n.ToString();
+int i = 0;
+int j = a.Length;
+while(i < j)
+{
+    if(a[i]==a[j])
+        Console.Write("Палиндром");
+    else
+    {
+        Console.Write("Не палиндром");
+    }
+    i++;
+    j--;
+}
 
+//}
 
 
 //1.
@@ -48,3 +66,5 @@ int SummDigits(int n)
 //Console.WriteLine("Введите число - ");
 //int n = int.Parse(Console.ReadLine() ?? "0");
 //Console.WriteLine($"Сумма цифр числа = {SummDigits(n)}");
+
+
