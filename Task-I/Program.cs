@@ -101,12 +101,43 @@ int CountEvenNumber(int[]array)
             count++;
     return count;
 }
+// Подсчёт количества положительных элементов в массиве
+int CountPositiveElementsArray(int[]array)
+{
+    int count = 0;
+    for(int i = 0; i < array.Length; i++)
+        if(array[i] > 0)
+            count++;
+    return count;
+}
+// 13. Подсчёт количества нечётных элементов в массиве
+int CountOddNumbers(int[]array)
+{
+    int count = 0;
+    for(int i = 0; i < array.Length; i++)
+        if(array[i] % 2 != 0)
+            count++;
+    return count;
+}
+// 14. Проверка является ли массив отсортированным по возрастанию. 
+// Если массив отсортирован, то возвращать true, иначе - false.
+bool SortedArray(int[]array)
+{
+    for(int i = 0; i < array.Length; i++)
+        if(array[i] <= array[i+1])
+            return true;
+        else
+        {
+            return false;
+        }
+}
+
 
 Console.WriteLine("Введите длину массива - ");
 int length = int.Parse(Console.ReadLine() ?? "0");
 int[]array = new int[length];
 Console.WriteLine("Ваш массив - ");
-GenerateArrayElements(array, 0, 10);
+GenerateArrayElements(array, -10, 10);
 PrintArray(array);
 
 //Console.WriteLine($"Минимальное значение в массиве = {MinElementArray(array)}");
@@ -120,11 +151,14 @@ PrintArray(array);
 //Console.WriteLine($"Индекс заданного числа = {index}");
 
 //Console.WriteLine($"Среднее арифметическое элеметов массива = {AverageArray(array)}");
-//Console.WriteLine($"Количества отрицательных элементов массива - {CountNegativeElementsArray(array)}");
+//Console.WriteLine($"Количество отрицательных элементов массива - {CountNegativeElementsArray(array)}");
 
 //Console.WriteLine("Введите число - ");
 //int find = int.Parse(Console.ReadLine() ?? "0");
 //int c = CountFindElementsArray(array, find);
 //Console.WriteLine($"Число встречается {c} раз");
 
-//Console.WriteLine($"Количества четных элементов массива - {CountEvenNumber(array)}");
+//Console.WriteLine($"Количество четных элементов массива - {CountEvenNumber(array)}");
+//Console.WriteLine($"Количество положительных элементов массива - {CountPositiveElementsArray(array)}");
+//Console.WriteLine($"Количество нечетных элементов массива - {CountOddNumbers(array)}");
+Console.WriteLine($"{SortedArray(array)}");
