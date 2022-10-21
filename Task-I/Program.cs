@@ -12,7 +12,7 @@ void PrintArray(int[]array)
     Console.WriteLine();
 }
 
-//Поиск минимума
+//1. Поиск минимума
 int MinElementArray(int[]array)
 {
     int min = array[0];
@@ -21,7 +21,7 @@ int MinElementArray(int[]array)
             min = array[i];
     return min;
 }
-// Поиск максимума
+//2. Поиск максимума
 int MaxElementArray(int[]array)
 {
     int max = array[0];
@@ -30,7 +30,7 @@ int MaxElementArray(int[]array)
             max = array[i];
     return max;
 }
-// Поиск суммы элементов массива
+//3. Поиск суммы элементов массива
 int SummElementsArray(int[]array)
 {
     int sum = 0;
@@ -38,7 +38,7 @@ int SummElementsArray(int[]array)
         sum+=array[i];
     return sum;
 }
-// Поиск произведения элементов массива
+//4. Поиск произведения элементов массива
 int MultElementsArray(int[]array)
 {
     int mult = 1;
@@ -46,7 +46,7 @@ int MultElementsArray(int[]array)
         mult = mult * array[i];
     return mult;
 }
-// Поиск индекса заданного элемента в массиве, если такого элемента в массиве нет то возвращать -1
+//5. Поиск индекса заданного элемента в массиве, если такого элемента в массиве нет то возвращать -1
 int FindIndexElementArray(int[]array, int find)
 {
     int position = -1;
@@ -58,7 +58,17 @@ int FindIndexElementArray(int[]array, int find)
         }
     return position;
 }
-// Проверка наличия элемента в массиве. Возвращает true, если элемент в массиве есть, false – нет.
+//6. Проверка наличия элемента в массиве. Возвращает true, если элемент в массиве есть, false – нет.
+bool PresenceElementsArray(int[]array, int find)
+{
+    for(int i = 0; i < array.Length; i++)
+        if(array[i] == find)
+            return true;
+        else
+            return false;
+    return true;
+}
+
 
 // Печать массива на экран
 
@@ -124,12 +134,13 @@ int CountOddNumbers(int[]array)
 bool SortedArray(int[]array)
 {
     for(int i = 0; i < array.Length; i++)
-        if(array[i] <= array[i+1])
+        if(array[i] < array[i+1])
             return true;
         else
         {
             return false;
         }
+    return true;
 }
 
 
@@ -161,4 +172,7 @@ PrintArray(array);
 //Console.WriteLine($"Количество четных элементов массива - {CountEvenNumber(array)}");
 //Console.WriteLine($"Количество положительных элементов массива - {CountPositiveElementsArray(array)}");
 //Console.WriteLine($"Количество нечетных элементов массива - {CountOddNumbers(array)}");
-Console.WriteLine($"{SortedArray(array)}");
+
+//Console.WriteLine(SortedArray(array));
+
+Console.WriteLine(PresenceElementsArray(array, 5));
