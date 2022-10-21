@@ -1,0 +1,16 @@
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Черновик\bin\Debug\net6.0\Черновик.exe
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Черновик\bin\Debug\net6.0\Черновик.deps.json
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Черновик\bin\Debug\net6.0\Черновик.runtimeconfig.json
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Черновик\bin\Debug\net6.0\Черновик.dll
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Черновик\bin\Debug\net6.0\ref\Черновик.dll
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Черновик\bin\Debug\net6.0\Черновик.pdb
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Черновик\obj\Debug\net6.0\Черновик.GlobalUsings.g.cs
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Черновик\obj\Debug\net6.0\Черновик.csproj.AssemblyReference.cache
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Черновик\obj\Debug\net6.0\Черновик.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Черновик\obj\Debug\net6.0\Черновик.AssemblyInfoInputs.cache
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Черновик\obj\Debug\net6.0\Черновик.AssemblyInfo.cs
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Черновик\obj\Debug\net6.0\Черновик.csproj.CoreCompileInputs.cache
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Черновик\obj\Debug\net6.0\Черновик.dll
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Черновик\obj\Debug\net6.0\ref\Черновик.dll
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Черновик\obj\Debug\net6.0\Черновик.pdb
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Черновик\obj\Debug\net6.0\Черновик.genruntimeconfig.cache
