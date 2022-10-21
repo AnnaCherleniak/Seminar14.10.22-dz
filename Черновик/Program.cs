@@ -10,28 +10,30 @@ void PrintArray(int[]array)
         Console.Write($"{array[i]} ");
     Console.WriteLine();
 }
-
+//6. Проверка наличия элемента
 bool PresenceElementsArray(int[]array, int find)
 {
-    for(int i = 0; i < array.Length; i++)
+    for(var i = 0; i < array.Length; i++)
+    {
         if(array[i] == find)
+        {
             return true;
-        else
-            return false;
-    return true;
+        }
+    }
+    return false;
 }
 
 // 14. Проверка является ли массив отсортированным по возрастанию. 
 // Если массив отсортирован, то возвращать true, иначе - false.
 bool SortedArray(int[]array)
 {
-    for(int i = 0; i < array.Length; i++)
-        if(array[i] < array[i+1])
-            return true;
-        else
+    for(var i = 0; i < array.Length - 1; i++)
+    {
+        if(array[i] > array[i+1])
         {
             return false;
         }
+    }
     return true;
 }
 // 6. Функцию, определяющую является ли число простым, 
@@ -42,10 +44,10 @@ bool PrimeNumber(int n)
     if(n > 1)
     {
         for(int x = 2; x < n; x++)
-            if(n % x != 0)
-                return true;
-            else
+        {
+            if(n % x == 0)
                 return false;
+        }
     }
     return true;
 }
@@ -54,9 +56,7 @@ bool PrimeNumber(int n)
 
 bool Check(int n)
 {
-    if(n % 2 == 0)
-        return true;
-    else
+    if(n % 2 != 0)
         return false;
     return true;
 }
@@ -65,9 +65,18 @@ Console.WriteLine("Введите длину массива - ");
 int length = int.Parse(Console.ReadLine() ?? "0");
 int[]array = new int[length];
 Console.WriteLine("Ваш массив - ");
-GenerateArrayElements(array, 0, 10);
+GenerateArrayElements(array, 1, 10);
 PrintArray(array);
 
-//Console.WriteLine("Введите число - ");
-//int find = int.Parse(Console.ReadLine() ?? "0");
-Console.WriteLine(PresenceElementsArray(array, 6));
+Console.WriteLine("Введите число - ");
+int find = int.Parse(Console.ReadLine() ?? "0");
+Console.WriteLine(PresenceElementsArray(array, find));
+
+Console.WriteLine($"Отсортирован ли наш массив - {SortedArray(array)}");
+
+Console.WriteLine("Введите число - ");
+int n = int.Parse(Console.ReadLine() ?? "0");
+Console.WriteLine($"Является ли число простым - {PrimeNumber(n)}");
+
+
+Console.WriteLine($"Является ли число четным - {Check(n)}");
