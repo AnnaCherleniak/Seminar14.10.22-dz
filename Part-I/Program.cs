@@ -6,6 +6,7 @@ void GenerateArrayElements(int[]array, int min, int max)
         array[i] = random.Next(min, max);
 }
 
+
 //1. Поиск минимума
 int MinElementArray(int[]array)
 {
