@@ -1,40 +1,73 @@
-﻿//Console.WriteLine("Введите число - ");
-//int n = int.Parse(Console.ReadLine() ?? "0");
-void Palindrome( int n)
+﻿void GenerateArrayElements(int[]array, int min, int max)
 {
-    int N = n;
-    int length = 0;
-    while(N > 0)
-    {
-        N/=10;
-        length++;
-    }
-    int[] digits = new int[length];
-    int i = length - 1;
-    while(n > 0)
-    {
-        digits[i] = n % 10;
-        n = n/10;
-        i = i-1;
-    }
-    i = 0;
-    int j = length - 1;
-    int count = 0;
-    while(i < j)
-    {
-        if(digits[i]!= digits[length - i - 1])
-            count++;
-        i++;
-        j--;
-    }
-    if(count > 0)
-        Console.WriteLine("Не палиндром");
-    else
-    {
-        Console.WriteLine("Палиндром");
-    }
+    Random random = new Random();
+    for(int i = 0; i < array.Length; i++)
+        array[i] = random.Next(min, max);
+}
+void PrintArray(int[]array)
+{
+    for(int i = 0; i < array.Length; i++)
+        Console.Write($"{array[i]} ");
+    Console.WriteLine();
 }
 
-Console.WriteLine("Введите число - ");
-int n = int.Parse(Console.ReadLine() ?? "0");
-Palindrome(n);
+bool PresenceElementsArray(int[]array, int find)
+{
+    for(int i = 0; i < array.Length; i++)
+        if(array[i] == find)
+            return true;
+        else
+            return false;
+    return true;
+}
+
+// 14. Проверка является ли массив отсортированным по возрастанию. 
+// Если массив отсортирован, то возвращать true, иначе - false.
+bool SortedArray(int[]array)
+{
+    for(int i = 0; i < array.Length; i++)
+        if(array[i] < array[i+1])
+            return true;
+        else
+        {
+            return false;
+        }
+    return true;
+}
+// 6. Функцию, определяющую является ли число простым, 
+//то есть возвращающую true, если число простое, иначе - false
+
+bool PrimeNumber(int n)
+{
+    if(n > 1)
+    {
+        for(int x = 2; x < n; x++)
+            if(n % x != 0)
+                return true;
+            else
+                return false;
+    }
+    return true;
+}
+// 7. Функцию, определяющую является ли число чётным, 
+//то есть возвращающую true, если число чётное, иначе - false
+
+bool Check(int n)
+{
+    if(n % 2 == 0)
+        return true;
+    else
+        return false;
+    return true;
+}
+
+Console.WriteLine("Введите длину массива - ");
+int length = int.Parse(Console.ReadLine() ?? "0");
+int[]array = new int[length];
+Console.WriteLine("Ваш массив - ");
+GenerateArrayElements(array, 0, 10);
+PrintArray(array);
+
+//Console.WriteLine("Введите число - ");
+//int find = int.Parse(Console.ReadLine() ?? "0");
+Console.WriteLine(PresenceElementsArray(array, 6));
