@@ -31,26 +31,75 @@ int SummDigits(int n)
     return sum;
 }
 // 4. Функцию, которая проверяет является ли заданное число n полиндромом
-//void Palindrome(int n)
-//{
-int n = 12321;
-string a = n.ToString();
-int i = 0;
-int j = a.Length;
-while(i < j)
+void Palindrome( int n)
 {
-    if(a[i]==a[j])
-        Console.Write("Палиндром");
+    int N = n;
+    int length = 0;
+    while(N > 0)
+    {
+        N/=10;
+        length++;
+    }
+    int[] digits = new int[length];
+    int i = length - 1;
+    while(n > 0)
+    {
+        digits[i] = n % 10;
+        n = n/10;
+        i = i-1;
+    }
+    i = 0;
+    int j = length - 1;
+    int count = 0;
+    while(i < j)
+    {
+        if(digits[i]!= digits[length - i - 1])
+            count++;
+        i++;
+        j--;
+    }
+    if(count > 0)
+        Console.WriteLine("Не палиндром");
     else
     {
-        Console.Write("Не палиндром");
+        Console.WriteLine("Палиндром");
     }
-    i++;
-    j--;
 }
 
-//}
 
+// 5. Функцию, складывающую два целых числа
+
+int SummNumbers(int a, int b)
+{
+    int sum = a + b;
+    return sum;
+}
+
+// 6. Функцию, определяющую является ли число простым, 
+//то есть возвращающую true, если число простое, иначе - false
+bool PrimeNumber(int n)
+{
+    if(n > 1)
+    {
+        for(int x = 2; x < n; x++)
+            if(n % x != 0)
+                return true;
+            else
+                return false;
+    }
+    return true;
+}
+// 7. Функцию, определяющую является ли число чётным, 
+//то есть возвращающую true, если число чётное, иначе - false
+
+bool Check(int n)
+{
+    if(n % 2 == 0)
+        return true;
+    else
+        return false;
+    return true;
+}
 
 //1.
 //Console.WriteLine("Введите число (a) - ");
@@ -67,4 +116,26 @@ while(i < j)
 //int n = int.Parse(Console.ReadLine() ?? "0");
 //Console.WriteLine($"Сумма цифр числа = {SummDigits(n)}");
 
+//4.
+//Console.WriteLine("Введите число - ");
+//int n = int.Parse(Console.ReadLine() ?? "0");
+//Palindrome(n);
 
+
+//5.
+//Console.WriteLine("Введите первое число - ");
+//int a = int.Parse(Console.ReadLine() ?? "0");
+//Console.WriteLine("Введите второе число - ");
+//int b = int.Parse(Console.ReadLine() ?? "0");
+//Console.WriteLine($"Сумма двух чисел = {SummNumbers(a, b)}");
+
+
+//6.
+Console.WriteLine("Введите число - ");
+int n = int.Parse(Console.ReadLine() ?? "0");
+Console.WriteLine(PrimeNumber(n));
+
+//7.
+//Console.WriteLine("Введите число - ");
+//int n = int.Parse(Console.ReadLine() ?? "0");
+//Console.WriteLine(Check(n));
