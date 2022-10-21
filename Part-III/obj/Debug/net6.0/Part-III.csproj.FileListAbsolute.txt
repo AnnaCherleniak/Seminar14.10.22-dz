@@ -1,0 +1,16 @@
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Part-III\bin\Debug\net6.0\Part-III.exe
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Part-III\bin\Debug\net6.0\Part-III.deps.json
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Part-III\bin\Debug\net6.0\Part-III.runtimeconfig.json
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Part-III\bin\Debug\net6.0\Part-III.dll
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Part-III\bin\Debug\net6.0\ref\Part-III.dll
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Part-III\bin\Debug\net6.0\Part-III.pdb
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Part-III\obj\Debug\net6.0\Part-III.GlobalUsings.g.cs
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Part-III\obj\Debug\net6.0\Part-III.csproj.AssemblyReference.cache
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Part-III\obj\Debug\net6.0\Part-III.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Part-III\obj\Debug\net6.0\Part-III.AssemblyInfoInputs.cache
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Part-III\obj\Debug\net6.0\Part-III.AssemblyInfo.cs
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Part-III\obj\Debug\net6.0\Part-III.csproj.CoreCompileInputs.cache
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Part-III\obj\Debug\net6.0\Part-III.dll
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Part-III\obj\Debug\net6.0\ref\Part-III.dll
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Part-III\obj\Debug\net6.0\Part-III.pdb
+C:\Users\Анна\Documents\ДЗ-Семинар-5\Seminar14.10.22-dz\Part-III\obj\Debug\net6.0\Part-III.genruntimeconfig.cache
