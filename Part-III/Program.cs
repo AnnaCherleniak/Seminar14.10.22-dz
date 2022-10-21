@@ -54,19 +54,14 @@ int FindIndexElementArray(int[]array, int find)
     return position;
 }
 //6. Проверка наличия элемента в массиве. Возвращает true, если элемент в массиве есть, false – нет.
-bool PresenceElementsArray(int[]array, int f)
+bool PresenceElementsArray(int[]array, int find)
 {
     for(int i = 0; i < array.Length; i++)
-    {
-        if(array[i] == f)
+        if(array[i] == find)
             return true;
-        else
-        {
-            return false;
-        }
-    }
-    return true;
+    return false;
 }
+
 //7. Печать массива на экран
 void PrintArray(int[]array)
 {
@@ -135,13 +130,9 @@ int CountOddNumbers(int[]array)
 // Если массив отсортирован, то возвращать true, иначе - false.
 bool SortedArray(int[]array)
 {
-    for(int i = 0; i < array.Length; i++)
-        if(array[i] < array[i+1])
-            return true;
-        else
-        {
+    for(int i = 0; i < array.Length - 1; i++)
+        if(array[i] > array[i+1])
             return false;
-        }
     return true;
 }
 
@@ -226,23 +217,17 @@ int SummNumbers(int a, int b)
 bool PrimeNumber(int n)
 {
     if(n > 1)
-    {
         for(int x = 2; x < n; x++)
-            if(n % x != 0)
-                return true;
-            else
+            if(n % x == 0)
                 return false;
-    }
     return true;
 }
+
 // 7. Функцию, определяющую является ли число чётным, 
 //то есть возвращающую true, если число чётное, иначе - false
-
 bool Check(int n)
 {
-    if(n % 2 == 0)
-        return true;
-    else
+    if(n % 2 != 0)
         return false;
     return true;
 }
@@ -252,7 +237,7 @@ Console.WriteLine("Введите длину массива - ");
 int length = int.Parse(Console.ReadLine() ?? "0");
 int[]array = new int[length];
 
-GenerateArrayElements(array, -10, 10);
+GenerateArrayElements(array, 1, 10);
 Console.WriteLine("Ваш массив - ");
 PrintArray(array);
 
@@ -268,8 +253,8 @@ int index = FindIndexElementArray(array, find);
 Console.WriteLine($"Индекс заданного числа = {index}");
 
 Console.WriteLine("Введите число, наличие которого нужно проверить - ");
-int f = int.Parse(Console.ReadLine() ?? "0");
-Console.WriteLine($"Наличие данного элемента в массиве - {PresenceElementsArray(array, f)}");
+find = int.Parse(Console.ReadLine() ?? "0");
+Console.WriteLine($"Наличие данного элемента в массиве - {PresenceElementsArray(array, find)}");
 
 Console.WriteLine("Ваш массив - ");
 PrintArray(array);
@@ -277,7 +262,7 @@ PrintArray(array);
 Console.WriteLine($"Среднее арифметическое элеметов массива = {AverageArray(array)}");
 Console.WriteLine($"Количество отрицательных элементов массива - {CountNegativeElementsArray(array)}");
 
-Console.WriteLine("Введите число - ");
+Console.WriteLine("Введите число, которое найти в массиве - ");
 find = int.Parse(Console.ReadLine() ?? "0");
 int c = CountFindElementsArray(array, find);
 Console.WriteLine($"Число встречается {c} раз");
@@ -315,6 +300,5 @@ Console.WriteLine($"Сумма двух чисел = {SummNumbers(a, b)}");
 Console.WriteLine("Введите число - ");
 n = int.Parse(Console.ReadLine() ?? "0");
 Console.WriteLine($"Является ли число простым - {PrimeNumber(n)}");
-
 
 Console.WriteLine($"Является ли число четным - {Check(n)}");
