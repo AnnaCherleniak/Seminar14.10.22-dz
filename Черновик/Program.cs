@@ -13,13 +13,9 @@ void PrintArray(int[]array)
 //6. Проверка наличия элемента
 bool PresenceElementsArray(int[]array, int find)
 {
-    for(var i = 0; i < array.Length; i++)
-    {
+    for(int i = 0; i < array.Length; i++)
         if(array[i] == find)
-        {
             return true;
-        }
-    }
     return false;
 }
 
@@ -27,13 +23,9 @@ bool PresenceElementsArray(int[]array, int find)
 // Если массив отсортирован, то возвращать true, иначе - false.
 bool SortedArray(int[]array)
 {
-    for(var i = 0; i < array.Length - 1; i++)
-    {
+    for(int i = 0; i < array.Length - 1; i++)
         if(array[i] > array[i+1])
-        {
             return false;
-        }
-    }
     return true;
 }
 // 6. Функцию, определяющую является ли число простым, 
@@ -42,13 +34,9 @@ bool SortedArray(int[]array)
 bool PrimeNumber(int n)
 {
     if(n > 1)
-    {
         for(int x = 2; x < n; x++)
-        {
             if(n % x == 0)
                 return false;
-        }
-    }
     return true;
 }
 // 7. Функцию, определяющую является ли число чётным, 
